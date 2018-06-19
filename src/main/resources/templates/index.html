@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Paintings Classifier</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1" charset="UTF-8"/>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div id="wrapper" class="col-sm-12">
+            <div id="img-holder" class="card-panel ">
+                <img th:src="@{${uploadedFile}}" alt="image" />
+                <!--<a class="btn-floating btn-large waves-effect waves-light green">
+                    <i class = "material-icons">add</i>
+                </a>
+                -->
+                <form th:object="${uploadedImage}" method="POST" action="" enctype="multipart/form-data">
+                    <input th:field="*{imageData}" type="file" />
+                    <br/>
+                    <input type="submit" value="Upload" />
+                </form>
+            </div>
+            <div id="img-holder-under">
+                <div class="input-field col s6">
+                    <input id="topStyle" type="text" class="validate" th:value="${topStyle}"/>
+                    <label for="topStyle">Top Style:</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="secondStyle" type="text" class="validate" th:value="${secondStyle}"/>
+                    <label for="secondStyle">Second Style:</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="thirdStyle" type="text" class="validate" th:value="${thirdStyle}"/>
+                    <label for="thirdStyle">Third Style:</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

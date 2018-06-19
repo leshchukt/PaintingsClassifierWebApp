@@ -1,0 +1,64 @@
+html {
+    background: #e6e9e9;
+    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    background-color: #F5F5F5;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+
+    height: 600px;
+}
+
+#img-holder {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+#img-holder a {
+    position: absolute;
+    top: 485px;
+    left: 47%;
+    z-index: 999;
+}
+
+#img-holder > img{
+    max-height: 450px;
+    max-width: 1000px;
+}
+
+#img-holder-under {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+#img-holder-under > div {
+    width: 300px;
+    
+}
+
+#img-holder-under > div input {
+    font-size: 17px;
+}
+
+#img-holder-under > div label {
+    font-size: 15px;
+}
